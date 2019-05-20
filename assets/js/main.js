@@ -1,22 +1,34 @@
 var c = document.getElementById('monCanvas');
 var ctx = c.getContext("2d");
 
-// Le cornet
+
+// Le fond
 ctx.beginPath();
-ctx.moveTo(250,200);
-ctx.lineTo(210,250);
-ctx.lineTo(180,200);
-ctx.lineTo(250,200);
-ctx.fillStyle = "red";
+ctx.rect(0, 0, 400, 400);
+ctx.fillStyle = "blue";
 ctx.fill();
 ctx.stroke();
 
-// La boule de glace
+
+// Tete du vaisseau
 ctx.beginPath();
 ctx.moveTo(250,200);
-// ctx.quadraticCurveTo(Courbe,courbe, position x, position y)
-ctx.quadraticCurveTo(210,140,180,200);
-ctx.fillStyle = "orange";
+ctx.quadraticCurveTo(200,100,140,200);
+ctx.fillStyle = "white";
 ctx.fill();
-ctx.strokeStyle = "red";
+ctx.stroke();
+
+// vaisseau
+ctx.beginPath();
+ctx.moveTo(0,240);
+ctx.quadraticCurveTo(200,150,400,240);
+ctx.fillStyle = "white";
+ctx.fill();
+ctx.stroke();
+// Vaisseau partie bas
+ctx.beginPath();
+ctx.moveTo(0,240);
+ctx.quadraticCurveTo(200,320,400,240);
+ctx.fillStyle = "white";
+ctx.fill();
 ctx.stroke();
